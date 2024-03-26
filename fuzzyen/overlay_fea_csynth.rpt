@@ -1,0 +1,289 @@
+
+
+================================================================
+== Vitis HLS Report for 'overlay_fea'
+================================================================
+* Date:           Fri Mar 22 16:11:46 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        sqi_ap
+* Solution:       solution_SQIs (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |   Latency (cycles)  |   Latency (absolute)  |       Interval      | Pipeline|
+    |    min   |    max   |    min    |    max    |    min   |    max   |   Type  |
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |  39968223|  39968223|  0.400 sec|  0.400 sec|  39968224|  39968224|       no|
+    +----------+----------+-----------+-----------+----------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------------+-------------------------------------------------+----------+----------+-----------+-----------+----------+----------+---------+
+        |                                                            |                                                 |   Latency (cycles)  |   Latency (absolute)  |       Interval      | Pipeline|
+        |                          Instance                          |                      Module                     |    min   |    max   |    min    |    max    |    min   |    max   |   Type  |
+        +------------------------------------------------------------+-------------------------------------------------+----------+----------+-----------+-----------+----------+----------+---------+
+        |grp_overlay_fea_Pipeline_1_fu_141                           |overlay_fea_Pipeline_1                           |      2003|      2003|  20.030 us|  20.030 us|      2003|      2003|       no|
+        |grp_overlay_fea_Pipeline_Loop_max_fu_149                    |overlay_fea_Pipeline_Loop_max                    |      4003|      4003|  40.030 us|  40.030 us|      4003|      4003|       no|
+        |grp_overlay_fea_Pipeline_Loop_norm_fu_159                   |overlay_fea_Pipeline_Loop_norm                   |      2024|      2024|  20.240 us|  20.240 us|      2024|      2024|       no|
+        |grp_overlay_fea_Pipeline_Loop_fuzzy_VITIS_LOOP_53_1_fu_167  |overlay_fea_Pipeline_Loop_fuzzy_VITIS_LOOP_53_1  |  39960075|  39960075|  0.400 sec|  0.400 sec|  39960075|  39960075|       no|
+        +------------------------------------------------------------+-------------------------------------------------+----------+----------+-----------+-----------+----------+----------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    132|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        4|  102|    8283|   9885|    -|
+|Memory           |        4|    -|       0|      0|    0|
+|Multiplexer      |        -|    -|       -|   1166|    -|
+|Register         |        -|    -|     809|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        8|  102|    9092|  11183|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        2|   46|       8|     21|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
+    |                          Instance                          |                      Module                     | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
+    |control_s_axi_U                                             |control_s_axi                                    |        0|   0|   107|   170|    0|
+    |dlog_64ns_64ns_64_41_full_dsp_1_U41                         |dlog_64ns_64ns_64_41_full_dsp_1                  |        0|  61|  2445|  1672|    0|
+    |faddfsub_32ns_32ns_32_5_full_dsp_1_U32                      |faddfsub_32ns_32ns_32_5_full_dsp_1               |        0|   2|   205|   390|    0|
+    |faddfsub_32ns_32ns_32_5_full_dsp_1_U33                      |faddfsub_32ns_32ns_32_5_full_dsp_1               |        0|   2|   205|   390|    0|
+    |fdiv_32ns_32ns_32_16_no_dsp_1_U35                           |fdiv_32ns_32ns_32_16_no_dsp_1                    |        0|   0|     0|     0|    0|
+    |fdiv_32ns_32ns_32_16_no_dsp_1_U36                           |fdiv_32ns_32ns_32_16_no_dsp_1                    |        0|   0|     0|     0|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U34                           |fmul_32ns_32ns_32_4_max_dsp_1                    |        0|   3|   143|   321|    0|
+    |fpext_32ns_64_2_no_dsp_1_U40                                |fpext_32ns_64_2_no_dsp_1                         |        0|   0|     0|     0|    0|
+    |fptrunc_64ns_32_2_no_dsp_1_U39                              |fptrunc_64ns_32_2_no_dsp_1                       |        0|   0|     0|     0|    0|
+    |gmem_m_axi_U                                                |gmem_m_axi                                       |        4|   0|   512|   580|    0|
+    |mul_24s_24s_24_1_1_U43                                      |mul_24s_24s_24_1_1                               |        0|   1|     0|    38|    0|
+    |mul_24s_24s_24_1_1_U44                                      |mul_24s_24s_24_1_1                               |        0|   1|     0|    38|    0|
+    |mul_32ns_32ns_64_2_1_U42                                    |mul_32ns_32ns_64_2_1                             |        0|   3|   165|    50|    0|
+    |grp_overlay_fea_Pipeline_1_fu_141                           |overlay_fea_Pipeline_1                           |        0|   0|    71|    74|    0|
+    |grp_overlay_fea_Pipeline_Loop_fuzzy_VITIS_LOOP_53_1_fu_167  |overlay_fea_Pipeline_Loop_fuzzy_VITIS_LOOP_53_1  |        0|  29|  3935|  5724|    0|
+    |grp_overlay_fea_Pipeline_Loop_max_fu_149                    |overlay_fea_Pipeline_Loop_max                    |        0|   0|   266|   338|    0|
+    |grp_overlay_fea_Pipeline_Loop_norm_fu_159                   |overlay_fea_Pipeline_Loop_norm                   |        0|   0|   229|   100|    0|
+    |sitofp_32ns_32_6_no_dsp_1_U37                               |sitofp_32ns_32_6_no_dsp_1                        |        0|   0|     0|     0|    0|
+    |sitofp_32s_32_6_no_dsp_1_U38                                |sitofp_32s_32_6_no_dsp_1                         |        0|   0|     0|     0|    0|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                       |                                                 |        4| 102|  8283|  9885|    0|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------+-------------------------+---------+---+----+-----+------+-----+------+-------------+
+    | Memory |          Module         | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------+-------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |buff_U  |buff_RAM_1WNR_AUTO_1R1W  |        4|  0|   0|    0|  2000|   32|     1|        64000|
+    +--------+-------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total   |                         |        4|  0|   0|    0|  2000|   32|     1|        64000|
+    +--------+-------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln50_1_fu_299_p2  |         +|   0|  0|  31|          24|           2|
+    |add_ln50_fu_276_p2    |         +|   0|  0|  39|          32|           2|
+    |add_ln67_fu_304_p2    |         +|   0|  0|  31|          24|           3|
+    |add_ln69_fu_309_p2    |         +|   0|  0|  31|          24|           3|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 132|         104|          10|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+-----+-----------+-----+-----------+
+    |        Name       | LUT | Input Size| Bits| Total Bits|
+    +-------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm          |  616|        120|    1|        120|
+    |buff_address0      |   31|          6|   11|         66|
+    |buff_ce0           |   31|          6|    1|          6|
+    |buff_ce1           |    9|          2|    1|          2|
+    |buff_d0            |   14|          3|   32|         96|
+    |buff_we0           |   14|          3|    1|          3|
+    |gmem_ARADDR        |   14|          3|   64|        192|
+    |gmem_ARBURST       |    9|          2|    2|          4|
+    |gmem_ARCACHE       |    9|          2|    4|          8|
+    |gmem_ARID          |    9|          2|    1|          2|
+    |gmem_ARLEN         |   14|          3|   32|         96|
+    |gmem_ARLOCK        |    9|          2|    2|          4|
+    |gmem_ARPROT        |    9|          2|    3|          6|
+    |gmem_ARQOS         |    9|          2|    4|          8|
+    |gmem_ARREGION      |    9|          2|    4|          8|
+    |gmem_ARSIZE        |    9|          2|    3|          6|
+    |gmem_ARUSER        |    9|          2|    1|          2|
+    |gmem_ARVALID       |   14|          3|    1|          3|
+    |gmem_RREADY        |    9|          2|    1|          2|
+    |gmem_blk_n_AR      |    9|          2|    1|          2|
+    |grp_fu_177_ce      |   14|          3|    1|          3|
+    |grp_fu_177_opcode  |   25|          5|    2|         10|
+    |grp_fu_177_p0      |   31|          6|   32|        192|
+    |grp_fu_177_p1      |   37|          7|   32|        224|
+    |grp_fu_182_opcode  |   14|          3|    2|          6|
+    |grp_fu_182_p0      |   14|          3|   32|         96|
+    |grp_fu_182_p1      |   14|          3|   32|         96|
+    |grp_fu_188_ce      |    9|          2|    1|          2|
+    |grp_fu_188_p0      |   14|          3|   32|         96|
+    |grp_fu_188_p1      |   14|          3|   32|         96|
+    |grp_fu_193_ce      |   14|          3|    1|          3|
+    |grp_fu_193_p0      |   25|          5|   32|        160|
+    |grp_fu_193_p1      |   25|          5|   32|        160|
+    |grp_fu_201_p0      |   14|          3|   32|         96|
+    |grp_fu_207_ce      |    9|          2|    1|          2|
+    |grp_fu_207_p0      |   14|          3|   64|        192|
+    |grp_fu_210_ce      |    9|          2|    1|          2|
+    |grp_fu_210_p0      |   14|          3|   32|         96|
+    +-------------------+-----+-----------+-----+-----------+
+    |Total              | 1166|        235|  563|       2168|
+    +-------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------------+-----+----+-----+-----------+
+    |                                   Name                                  |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------------+-----+----+-----+-----------+
+    |A_reg_466                                                                |   32|   0|   32|          0|
+    |add_ln50_1_reg_425                                                       |   24|   0|   24|          0|
+    |add_ln50_reg_402                                                         |   32|   0|   32|          0|
+    |add_ln67_reg_430                                                         |   24|   0|   24|          0|
+    |add_ln69_reg_436                                                         |   24|   0|   24|          0|
+    |ap_CS_fsm                                                                |  119|   0|  119|          0|
+    |conv62_i_reg_461                                                         |   32|   0|   32|          0|
+    |conv_i_i_reg_471                                                         |   64|   0|   64|          0|
+    |empty_reg_389                                                            |   24|   0|   24|          0|
+    |grp_overlay_fea_Pipeline_1_fu_141_ap_start_reg                           |    1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_Loop_fuzzy_VITIS_LOOP_53_1_fu_167_ap_start_reg  |    1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_Loop_max_fu_149_ap_start_reg                    |    1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_Loop_norm_fu_159_ap_start_reg                   |    1|   0|    1|          0|
+    |max_reg_375                                                              |   32|   0|   32|          0|
+    |mul_ln45_reg_414                                                         |   64|   0|   64|          0|
+    |mul_ln67_reg_441                                                         |   24|   0|   24|          0|
+    |mul_ln69_reg_446                                                         |   24|   0|   24|          0|
+    |out_reg_481                                                              |   32|   0|   32|          0|
+    |reg_218                                                                  |   32|   0|   32|          0|
+    |reg_225                                                                  |   32|   0|   32|          0|
+    |reg_232                                                                  |   32|   0|   32|          0|
+    |reg_238                                                                  |   32|   0|   32|          0|
+    |tmp_reg_476                                                              |   64|   0|   64|          0|
+    |trunc_ln_reg_359                                                         |   62|   0|   62|          0|
+    +-------------------------------------------------------------------------+-----+----+-----+-----------+
+    |Total                                                                    |  809|   0|  809|          0|
+    +-------------------------------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWADDR   |   in|    5|       s_axi|       control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|       control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|       control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARADDR   |   in|    5|       s_axi|       control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|       control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|       control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|       control|        scalar|
+|ap_local_block         |  out|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|m_axi_gmem_AWVALID     |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWREADY     |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWADDR      |  out|   64|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWID        |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWLEN       |  out|    8|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWSIZE      |  out|    3|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWBURST     |  out|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWLOCK      |  out|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWCACHE     |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWPROT      |  out|    3|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWQOS       |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWREGION    |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWUSER      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WVALID      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WREADY      |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WDATA       |  out|   32|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WSTRB       |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WLAST       |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WID         |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WUSER       |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARVALID     |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARREADY     |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARADDR      |  out|   64|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARID        |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARLEN       |  out|    8|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARSIZE      |  out|    3|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARBURST     |  out|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARLOCK      |  out|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARCACHE     |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARPROT      |  out|    3|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARQOS       |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARREGION    |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARUSER      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RVALID      |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RREADY      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RDATA       |   in|   32|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RLAST       |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RID         |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RUSER       |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RRESP       |   in|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BVALID      |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BREADY      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BRESP       |   in|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BID         |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BUSER       |   in|    1|       m_axi|          gmem|       pointer|
+|length_r               |   in|   32|     ap_none|      length_r|        scalar|
+|FuzzyEn                |  out|   32|      ap_vld|       FuzzyEn|       pointer|
+|FuzzyEn_ap_vld         |  out|    1|      ap_vld|       FuzzyEn|       pointer|
++-----------------------+-----+-----+------------+--------------+--------------+
+
