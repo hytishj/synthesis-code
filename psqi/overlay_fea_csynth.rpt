@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vitis HLS Report for 'overlay_fea'
+================================================================
+* Date:           Tue Mar 19 16:37:45 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        sqi_ap
+* Solution:       solution_SQIs (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.290 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+-----------+----------+-----------+-------+-----------+---------+
+    |   Latency (cycles)  |  Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |    max    |    min   |    max    |  min  |    max    |   Type  |
+    +---------+-----------+----------+-----------+-------+-----------+---------+
+    |    14648|  289601715|  0.146 ms|  2.896 sec|  14649|  289601716|       no|
+    +---------+-----------+----------+-----------+-------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------+------------------------------------+---------+-----------+-----------+-----------+------+-----------+---------+
+        |                                               |                                    |   Latency (cycles)  |   Latency (absolute)  |     Interval     | Pipeline|
+        |                    Instance                   |               Module               |   min   |    max    |    min    |    max    |  min |    max    |   Type  |
+        +-----------------------------------------------+------------------------------------+---------+-----------+-----------+-----------+------+-----------+---------+
+        |grp_overlay_fea_Pipeline_1_fu_99               |overlay_fea_Pipeline_1              |     2050|       2050|  20.500 us|  20.500 us|  2050|       2050|       no|
+        |grp_overlay_fea_Pipeline_2_fu_105              |overlay_fea_Pipeline_2              |     2050|       2050|  20.500 us|  20.500 us|  2050|       2050|       no|
+        |grp_overlay_fea_Pipeline_3_fu_111              |overlay_fea_Pipeline_3              |     2050|       2050|  20.500 us|  20.500 us|  2050|       2050|       no|
+        |grp_overlay_fea_Pipeline_Loop_fft_fu_117       |overlay_fea_Pipeline_Loop_fft       |     2002|       2002|  20.020 us|  20.020 us|  2002|       2002|       no|
+        |grp_FFT_fu_125                                 |FFT                                 |     8313|  289595380|  83.130 us|  2.896 sec|  8313|  289595380|       no|
+        |grp_overlay_fea_Pipeline_Loop_freq_fu_144      |overlay_fea_Pipeline_Loop_freq      |     2023|       2023|  20.230 us|  20.230 us|  2023|       2023|       no|
+        |grp_overlay_fea_Pipeline_Loop_psqi_fu_151      |overlay_fea_Pipeline_Loop_psqi      |      185|        185|   1.850 us|   1.850 us|   185|        185|       no|
+        |grp_overlay_fea_Pipeline_Loop_fftclear_fu_158  |overlay_fea_Pipeline_Loop_fftclear  |       50|         50|   0.500 us|   0.500 us|    50|         50|       no|
+        +-----------------------------------------------+------------------------------------+---------+-----------+-----------+-----------+------+-----------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        8|   84|    9655|  12988|    -|
+|Memory           |       16|    -|       0|      0|    0|
+|Multiplexer      |        -|    -|       -|    635|    -|
+|Register         |        -|    -|      66|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       24|   84|    9721|  13625|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        8|   38|       9|     25|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------+------------------------------------+---------+----+------+-------+-----+
+    |                    Instance                   |               Module               | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +-----------------------------------------------+------------------------------------+---------+----+------+-------+-----+
+    |grp_FFT_fu_125                                 |FFT                                 |        8|  79|  8831|  11715|    0|
+    |faddfsub_32ns_32ns_32_5_full_dsp_1_U101        |faddfsub_32ns_32ns_32_5_full_dsp_1  |        0|   2|   205|    390|    0|
+    |fdiv_32ns_32ns_32_16_no_dsp_1_U100             |fdiv_32ns_32ns_32_16_no_dsp_1       |        0|   0|     0|      0|    0|
+    |fmul_32ns_32ns_32_4_max_dsp_1_U102             |fmul_32ns_32ns_32_4_max_dsp_1       |        0|   3|   143|    321|    0|
+    |grp_overlay_fea_Pipeline_1_fu_99               |overlay_fea_Pipeline_1              |        0|   0|    14|     51|    0|
+    |grp_overlay_fea_Pipeline_2_fu_105              |overlay_fea_Pipeline_2              |        0|   0|    14|     51|    0|
+    |grp_overlay_fea_Pipeline_3_fu_111              |overlay_fea_Pipeline_3              |        0|   0|    14|     51|    0|
+    |grp_overlay_fea_Pipeline_Loop_fft_fu_117       |overlay_fea_Pipeline_Loop_fft       |        0|   0|    14|     57|    0|
+    |grp_overlay_fea_Pipeline_Loop_fftclear_fu_158  |overlay_fea_Pipeline_Loop_fftclear  |        0|   0|    14|     51|    0|
+    |grp_overlay_fea_Pipeline_Loop_freq_fu_144      |overlay_fea_Pipeline_Loop_freq      |        0|   0|   229|    100|    0|
+    |grp_overlay_fea_Pipeline_Loop_psqi_fu_151      |overlay_fea_Pipeline_Loop_psqi      |        0|   0|   177|    201|    0|
+    +-----------------------------------------------+------------------------------------+---------+----+------+-------+-----+
+    |Total                                          |                                    |        8|  84|  9655|  12988|    0|
+    +-----------------------------------------------+------------------------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +------------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+    |   Memory   |       Module      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+    |InA_U       |InA_RAM_AUTO_1R1W  |        4|  0|   0|    0|  2048|   32|     1|        65536|
+    |spectrum_U  |InA_RAM_AUTO_1R1W  |        4|  0|   0|    0|  2048|   32|     1|        65536|
+    |InR_U       |InR_RAM_AUTO_1R1W  |        4|  0|   0|    0|  2048|   32|     1|        65536|
+    |InI_U       |InR_RAM_AUTO_1R1W  |        4|  0|   0|    0|  2048|   32|     1|        65536|
+    +------------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total       |                   |       16|  0|   0|    0|  8192|  128|     4|       262144|
+    +------------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state2_on_subcall_done  |        or|   0|  0|   2|           1|           1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |Total                            |          |   0|  0|   2|           1|           1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+-----+-----------+-----+-----------+
+    |        Name       | LUT | Input Size| Bits| Total Bits|
+    +-------------------+-----+-----------+-----+-----------+
+    |InA_address0       |   25|          5|   11|         55|
+    |InA_ce0            |   25|          5|    1|          5|
+    |InA_d0             |   20|          4|   32|        128|
+    |InA_we0            |   20|          4|    1|          4|
+    |InI_address0       |   20|          4|   11|         44|
+    |InI_ce0            |   20|          4|    1|          4|
+    |InI_ce1            |    9|          2|    1|          2|
+    |InI_d0             |   20|          4|   32|        128|
+    |InI_we0            |   20|          4|    1|          4|
+    |InI_we1            |    9|          2|    1|          2|
+    |InR_address0       |   25|          5|   11|         55|
+    |InR_ce0            |   25|          5|    1|          5|
+    |InR_ce1            |    9|          2|    1|          2|
+    |InR_d0             |   25|          5|   32|        160|
+    |InR_we0            |   25|          5|    1|          5|
+    |InR_we1            |    9|          2|    1|          2|
+    |ap_NS_fsm          |  121|         27|    1|         27|
+    |grp_fu_166_ce      |   14|          3|    1|          3|
+    |grp_fu_166_p0      |   14|          3|   32|         96|
+    |grp_fu_166_p1      |   14|          3|   32|         96|
+    |grp_fu_217_ce      |   14|          3|    1|          3|
+    |grp_fu_217_opcode  |   14|          3|    2|          6|
+    |grp_fu_217_p0      |   14|          3|   32|         96|
+    |grp_fu_217_p1      |   14|          3|   32|         96|
+    |grp_fu_221_ce      |   14|          3|    1|          3|
+    |grp_fu_221_p0      |   14|          3|   32|         96|
+    |grp_fu_221_p1      |   14|          3|   32|         96|
+    |spectrum_address0  |   20|          4|   11|         44|
+    |spectrum_ce0       |   20|          4|    1|          4|
+    |spectrum_d0        |   14|          3|   32|         96|
+    |spectrum_we0       |   14|          3|    1|          3|
+    +-------------------+-----+-----------+-----+-----------+
+    |Total              |  635|        133|  382|       1370|
+    +-------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |                            Name                            | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                   |  26|   0|   26|          0|
+    |bitcast_ln141_reg_206                                       |  32|   0|   32|          0|
+    |grp_FFT_fu_125_ap_start_reg                                 |   1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_1_fu_99_ap_start_reg               |   1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_2_fu_105_ap_start_reg              |   1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_3_fu_111_ap_start_reg              |   1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_Loop_fft_fu_117_ap_start_reg       |   1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_Loop_fftclear_fu_158_ap_start_reg  |   1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_Loop_freq_fu_144_ap_start_reg      |   1|   0|    1|          0|
+    |grp_overlay_fea_Pipeline_Loop_psqi_fu_151_ap_start_reg      |   1|   0|    1|          0|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                       |  66|   0|   66|          0|
+    +------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_local_block     |  out|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_local_deadlock  |  out|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_clk             |   in|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|   overlay_fea|  return value|
+|data               |   in|   32|     ap_none|          data|       pointer|
+|length_r           |   in|   32|     ap_none|      length_r|        scalar|
+|pSQI               |  out|   32|      ap_vld|          pSQI|       pointer|
+|pSQI_ap_vld        |  out|    1|      ap_vld|          pSQI|       pointer|
++-------------------+-----+-----+------------+--------------+--------------+
+
