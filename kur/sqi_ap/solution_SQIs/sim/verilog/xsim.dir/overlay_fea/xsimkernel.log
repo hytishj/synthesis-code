@@ -1,0 +1,7 @@
+Running: xsim.dir/overlay_fea/xsimk.exe -simmode gui -wdb overlay_fea.wdb -simrunnum 0 -socket 59956
+Design successfully loaded
+Design Loading Memory Usage: 12612 KB (Peak: 12612 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 16168 KB (Peak: 16168 KB)
+Simulation CPU Usage: 1046 ms

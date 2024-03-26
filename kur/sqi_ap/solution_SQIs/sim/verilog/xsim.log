@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Mar 26 17:24:47 2024
+# Process ID: 21360
+# Current directory: E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/overlay_fea/xsim_script.tcl}
+# Log file: E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/xsim.log
+# Journal file: E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog\xsim.jou
+# Running On: yutonghou, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16892 MB
+#-----------------------------------------------------------
+source xsim.dir/overlay_fea/xsim_script.tcl
+# xsim {overlay_fea} -autoloadwcfg -tclbatch {overlay_fea.tcl}
+Time resolution is 1 ps
+source overlay_fea.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "221125000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 221185 ns : File "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea.autotb.v" Line 603
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Mar 26 17:24:52 2024...

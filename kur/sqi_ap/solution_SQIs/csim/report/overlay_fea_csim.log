@@ -1,0 +1,24 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../feature_test.c in debug mode
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'E:/Vivado2021.3/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'oakcorridor' on host 'yutonghou' (Windows NT_amd64 version 6.2) on Tue Mar 26 17:23:56 +0800 2024
+INFO: [HLS 200-10] In directory 'E:/journal/tohpp/kur/sqi_ap/solution_SQIs/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.817 seconds; peak allocated memory: 3.926 MB.
+   Compiling(apcc) ../../../../feature.c in debug mode
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'E:/Vivado2021.3/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'oakcorridor' on host 'yutonghou' (Windows NT_amd64 version 6.2) on Tue Mar 26 17:24:00 +0800 2024
+INFO: [HLS 200-10] In directory 'E:/journal/tohpp/kur/sqi_ap/solution_SQIs/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.789 seconds; peak allocated memory: 3.324 MB.
+   Generating csim.exe
+kurtosis = 13.8653
+line 0 ok
+…………………………�? time=0.001000 …………………�?
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

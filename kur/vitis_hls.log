@@ -1,0 +1,621 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source E:/Vivado2021.3/Vitis_HLS/2021.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'E:/Vivado2021.3/Vitis_HLS/2021.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'oakcorridor' on host 'yutonghou' (Windows NT_amd64 version 6.2) on Tue Mar 26 17:23:53 +0800 2024
+INFO: [HLS 200-10] In directory 'E:/journal/tohpp/kur'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset sqi_ap 
+INFO: [HLS 200-10] Opening and resetting project 'E:/journal/tohpp/kur/sqi_ap'.
+WARNING: [HLS 200-40] No E:/journal/tohpp/kur/sqi_ap/solution_SQIs/solution_SQIs.aps file found.
+INFO: [HLS 200-1510] Running: add_files feature.c 
+INFO: [HLS 200-10] Adding design file 'feature.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb feature_test.c 
+INFO: [HLS 200-10] Adding test bench file 'feature_test.c' to the project
+INFO: [HLS 200-1510] Running: set_top overlay_fea 
+INFO: [HLS 200-1510] Running: open_solution -reset solution_SQIs -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'E:/journal/tohpp/kur/sqi_ap/solution_SQIs'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+WARNING: [HLS 200-40] No E:/journal/tohpp/kur/sqi_ap/solution_SQIs/solution_SQIs.aps file found.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../feature_test.c in debug mode
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'E:/Vivado2021.3/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'oakcorridor' on host 'yutonghou' (Windows NT_amd64 version 6.2) on Tue Mar 26 17:23:56 +0800 2024
+INFO: [HLS 200-10] In directory 'E:/journal/tohpp/kur/sqi_ap/solution_SQIs/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.817 seconds; peak allocated memory: 3.926 MB.
+   Compiling(apcc) ../../../../feature.c in debug mode
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'E:/Vivado2021.3/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'oakcorridor' on host 'yutonghou' (Windows NT_amd64 version 6.2) on Tue Mar 26 17:24:00 +0800 2024
+INFO: [HLS 200-10] In directory 'E:/journal/tohpp/kur/sqi_ap/solution_SQIs/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.789 seconds; peak allocated memory: 3.324 MB.
+   Generating csim.exe
+kurtosis = 13.8653
+line 0 ok
+…………………………… time=0.001000 ……………………
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.165 seconds; current allocated memory: 0.352 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] Analyzing design file 'feature.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.68 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'mean_calc' into 'ksqi_calc' (feature.c:21:0)
+INFO: [HLS 214-178] Inlining function 'ksqi_calc' into 'overlay_fea' (feature.c:39:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-115] Multiple burst reads of length 2000 and bit width 32 in loop 'anonymous'(feature.c:43:2) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (feature.c:43:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.722 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 1.221 GB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'overlay_fea' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop_mean' (feature.c:11) in function 'overlay_fea' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop_kur' (feature.c:22) in function 'overlay_fea' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'buff' 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'overlay_fea' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'overlay_fea_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 1.221 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'overlay_fea_Pipeline_Loop_mean' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop_mean'.
+WARNING: [HLS 200-880] The II Violation in module 'overlay_fea_Pipeline_Loop_mean' (loop 'Loop_mean'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln15', feature.c:15) of variable 'sum', feature.c:15 on local variable 'sum' and 'load' operation ('sum_load', feature.c:15) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'overlay_fea_Pipeline_Loop_mean' (loop 'Loop_mean'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln15', feature.c:15) of variable 'sum', feature.c:15 on local variable 'sum' and 'load' operation ('sum_load', feature.c:15) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'overlay_fea_Pipeline_Loop_mean' (loop 'Loop_mean'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_write_ln15', feature.c:15) of variable 'sum', feature.c:15 on local variable 'sum' and 'load' operation ('sum_load', feature.c:15) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'overlay_fea_Pipeline_Loop_mean' (loop 'Loop_mean'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('sum_write_ln15', feature.c:15) of variable 'sum', feature.c:15 on local variable 'sum' and 'load' operation ('sum_load', feature.c:15) on local variable 'sum'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 8, loop 'Loop_mean'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.033 seconds; current allocated memory: 1.221 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'overlay_fea_Pipeline_Loop_kur' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop_kur'.
+WARNING: [HLS 200-880] The II Violation in module 'overlay_fea_Pipeline_Loop_kur' (loop 'Loop_kur'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('m2_write_ln31', feature.c:31) of variable 'm2', feature.c:31 on local variable 'm2' and 'load' operation ('m2_load', feature.c:31) on local variable 'm2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'overlay_fea_Pipeline_Loop_kur' (loop 'Loop_kur'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('m2_write_ln31', feature.c:31) of variable 'm2', feature.c:31 on local variable 'm2' and 'load' operation ('m2_load', feature.c:31) on local variable 'm2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'overlay_fea_Pipeline_Loop_kur' (loop 'Loop_kur'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('m2_write_ln31', feature.c:31) of variable 'm2', feature.c:31 on local variable 'm2' and 'load' operation ('m2_load', feature.c:31) on local variable 'm2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'overlay_fea_Pipeline_Loop_kur' (loop 'Loop_kur'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('m2_write_ln31', feature.c:31) of variable 'm2', feature.c:31 on local variable 'm2' and 'load' operation ('m2_load', feature.c:31) on local variable 'm2'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 21, loop 'Loop_kur'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 1.221 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'overlay_fea' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 1.221 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.191 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'overlay_fea_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'overlay_fea_Pipeline_1' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'overlay_fea_Pipeline_1/m_axi_gmem_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'overlay_fea_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'overlay_fea_Pipeline_Loop_mean' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'overlay_fea_Pipeline_Loop_mean' pipeline 'Loop_mean' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'overlay_fea_Pipeline_Loop_mean'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'overlay_fea_Pipeline_Loop_kur' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'overlay_fea_Pipeline_Loop_kur' pipeline 'Loop_kur' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'overlay_fea_Pipeline_Loop_kur'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'overlay_fea' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlay_fea/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlay_fea/data' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlay_fea/length_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'overlay_fea/kSQI' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'overlay_fea' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'data' and 'ap_local_deadlock' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'overlay_fea'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 1.221 GB.
+INFO: [RTMG 210-278] Implementing memory 'overlay_fea_buff_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.44 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.352 seconds; current allocated memory: 1.221 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for overlay_fea.
+INFO: [VLOG 209-307] Generating Verilog RTL for overlay_fea.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 5.24 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "E:/Vivado2021.3/Vitis_HLS/2021.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_overlay_fea.cpp
+   Compiling (apcc) feature_test.c_pre.c.tb.c
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'E:/Vivado2021.3/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'oakcorridor' on host 'yutonghou' (Windows NT_amd64 version 6.2) on Tue Mar 26 17:24:13 +0800 2024
+INFO: [HLS 200-10] In directory 'E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+E:/journal/tohpp/kur/feature_test.c:27:16: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+        printf("<U+2026><U+2026><U+2026><U+2026><U+2026><U+2026><U+2026><U+2026><U+2026><U+2026><E2><80>? time=%f <U+2026><U+2026><U+2026><U+2026><U+2026><U+2026><U+2026><E2><80>?\n", (float)(end - begin)/1000);
+               ^
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.922 seconds; peak allocated memory: 3.387 MB.
+   Compiling (apcc) feature.c_pre.c.tb.c
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'E:/Vivado2021.3/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'oakcorridor' on host 'yutonghou' (Windows NT_amd64 version 6.2) on Tue Mar 26 17:24:16 +0800 2024
+INFO: [HLS 200-10] In directory 'E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.925 seconds; peak allocated memory: 3.902 MB.
+   Compiling apatb_overlay_fea_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+kurtosis = 13.8653
+line 0 ok
+…………………………�? time=0.001000 …………………�?
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado_gen_ip.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado2021.3/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'overlay_fea_faddfsub_32ns_32ns_32_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'overlay_fea_faddfsub_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'overlay_fea_faddfsub_32ns_32ns_32_5_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'overlay_fea_fdiv_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'overlay_fea_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'overlay_fea_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'overlay_fea_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'overlay_fea_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'overlay_fea_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'overlay_fea_sitofp_32ns_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'overlay_fea_sitofp_32ns_32_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'overlay_fea_sitofp_32ns_32_6_no_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 26 17:24:35 2024...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+E:\journal\tohpp\kur\sqi_ap\solution_SQIs\sim\verilog>set PATH= 
+
+E:\journal\tohpp\kur\sqi_ap\solution_SQIs\sim\verilog>call E:/Vivado2021.3/Vivado/2021.2/bin/xelab xil_defaultlib.apatb_overlay_fea_top glbl -Oenable_linking_all_libraries  -prj overlay_fea.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_19 -L floating_point_v7_1_13 --lib "ieee_proposed=./ieee_proposed" -s overlay_fea  
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado2021.3/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_overlay_fea_top glbl -Oenable_linking_all_libraries -prj overlay_fea.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_13 --lib ieee_proposed=./ieee_proposed -s overlay_fea 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/ip/xil_defaultlib/overlay_fea_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_faddfsub_32ns_32ns_32_5_full_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/ip/xil_defaultlib/overlay_fea_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_fdiv_32ns_32ns_32_16_no_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/ip/xil_defaultlib/overlay_fea_fmul_32ns_32ns_32_4_max_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_fmul_32ns_32ns_32_4_max_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/ip/xil_defaultlib/overlay_fea_sitofp_32ns_32_6_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_sitofp_32ns_32_6_no_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/AESL_axi_master_gmem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_overlay_fea_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_buff_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_buff_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_faddfsub_32ns_32ns_32_5_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_faddfsub_32ns_32ns_32_5_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_fdiv_32ns_32ns_32_16_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_fdiv_32ns_32ns_32_16_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_fmul_32ns_32ns_32_4_max_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_fmul_32ns_32ns_32_4_max_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_gmem_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_gmem_m_axi
+INFO: [VRFC 10-311] analyzing module overlay_fea_gmem_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module overlay_fea_gmem_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module overlay_fea_gmem_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module overlay_fea_gmem_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module overlay_fea_gmem_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module overlay_fea_gmem_m_axi_read
+INFO: [VRFC 10-2458] undeclared symbol buf_data_nvalid, assumed default net type wire [E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_gmem_m_axi.v:1652]
+INFO: [VRFC 10-311] analyzing module overlay_fea_gmem_m_axi_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_overlay_fea_Pipeline_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_overlay_fea_Pipeline_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_overlay_fea_Pipeline_Loop_kur.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_overlay_fea_Pipeline_Loop_kur
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_overlay_fea_Pipeline_Loop_mean.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_overlay_fea_Pipeline_Loop_mean
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea_sitofp_32ns_32_6_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module overlay_fea_sitofp_32ns_32_6_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_viv_comp
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_exp_table...
+Compiling package mult_gen_v12_0_17.mult_gen_v12_0_17_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_pkg
+Compiling package floating_point_v7_1_13.flt_utils
+Compiling package unisim.vcomponents
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package floating_point_v7_1_13.vt2mutils
+Compiling package floating_point_v7_1_13.vt2mcomps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.overlay_fea_buff_RAM_AUTO_1R1W
+Compiling module xil_defaultlib.overlay_fea_flow_control_loop_pi...
+Compiling module xil_defaultlib.overlay_fea_overlay_fea_Pipeline...
+Compiling module xil_defaultlib.overlay_fea_overlay_fea_Pipeline...
+Compiling module xil_defaultlib.overlay_fea_overlay_fea_Pipeline...
+Compiling module xil_defaultlib.overlay_fea_control_s_axi
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_reg_slice...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_buffer(DA...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_fifo(DEPT...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_write(NUM...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_buffer(DA...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_reg_slice...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_read(NUM_...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi_throttle(...
+Compiling module xil_defaultlib.overlay_fea_gmem_m_axi(NUM_READ_...
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=7,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=16,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=24,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=17,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=25,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=48,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_13.fix_mult_dsp48e1_sgl [\fix_mult_dsp48e1_sgl(registers=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.fix_mult [\fix_mult(c_xdevicefamily="zynq"...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=32,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_13.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [delay_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=14,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="z...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=30,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=18,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_13.flt_round_dsp_opt_full [\flt_round_dsp_opt_full(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_mult [\flt_mult(c_xdevicefamily="zynq"...]
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.overlay_fea_fmul_32ns_32ns_32_4_...
+Compiling module xil_defaultlib.overlay_fea_fmul_32ns_32ns_32_4_...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=23,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=25,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=26,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=23)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=25,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=26)\]
+Compiling architecture virtex of entity floating_point_v7_1_13.flt_div_mant [\flt_div_mant(c_xdevicefamily="z...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=10,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_13.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=13,fast_input=true...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8,length=12)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=12,fast_input=true...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3,length=12,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,length=12,fast_in...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_div_exp [\flt_div_exp(c_xdevicefamily="no...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=12,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_13.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture virtex of entity floating_point_v7_1_13.flt_div [\flt_div(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.overlay_fea_fdiv_32ns_32ns_32_16...
+Compiling module xil_defaultlib.overlay_fea_fdiv_32ns_32ns_32_16...
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=31,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=32)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.norm_zero_det [\norm_zero_det(data_width=7,norm...]
+Compiling architecture rtl of entity floating_point_v7_1_13.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fde_v of entity unisim.FDE [fde_default]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_13.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+Compiling architecture rtl of entity floating_point_v7_1_13.shift_msb_first [\shift_msb_first(a_width=32,resu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=12,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_13.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=3)\]
+Compiling architecture synth of entity floating_point_v7_1_13.fix_to_flt_conv_exp [\fix_to_flt_conv_exp(c_xdevicefa...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture struct of entity floating_point_v7_1_13.fix_to_flt_conv [\fix_to_flt_conv(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.overlay_fea_sitofp_32ns_32_6_no_...
+Compiling module xil_defaultlib.overlay_fea_sitofp_32ns_32_6_no_...
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=24,length=0,fast_in...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(c_part="xc7z020...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=13,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=27,length=0)\]
+Compiling architecture synth of entity floating_point_v7_1_13.align_add_dsp48e1_sgl [\align_add_dsp48e1_sgl(c_xdevice...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000001111...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=5,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.lead_zero_encode_shift [\lead_zero_encode_shift(ab_fw=24...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110010101001011...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00010001010111110000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11101110101000001111...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,ca...]
+Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=24,c_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_13.norm_and_round_dsp48e1_sgl [\norm_and_round_dsp48e1_sgl(c_mu...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10011001100110011001...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111000000001111...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=9,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=10)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_13.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare [\compare(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=9)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=2,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=2,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_add_exp_sp [\flt_add_exp_sp(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_add_dsp [\flt_add_dsp(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_add [\flt_add(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.overlay_fea_faddfsub_32ns_32ns_3...
+Compiling module xil_defaultlib.overlay_fea_faddfsub_32ns_32ns_3...
+Compiling module xil_defaultlib.overlay_fea
+Compiling module xil_defaultlib.AESL_axi_master_gmem
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=5)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_overlay_fea_top
+Compiling module work.glbl
+Built simulation snapshot overlay_fea
+
+****** xsim v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/overlay_fea/xsim_script.tcl
+# xsim {overlay_fea} -autoloadwcfg -tclbatch {overlay_fea.tcl}
+Time resolution is 1 ps
+source overlay_fea.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "221125000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 221185 ns : File "E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/overlay_fea.autotb.v" Line 603
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Mar 26 17:24:52 2024...
+INFO: [COSIM 212-316] Starting C post checking ...
+kurtosis = 13.8653
+line 0 ok
+…………………………�? time=0.000000 …………………�?
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 43.731 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 59.611 seconds; peak allocated memory: 1.221 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Mar 26 17:24:53 2024...

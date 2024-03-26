@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="feature.c" line="12" pragmaType="loop_tripcount" parentfunction="mean_calc" min="2000" max="2000" avg="2000"/>
+<pragma file="feature.c" line="26" pragmaType="loop_tripcount" parentfunction="ksqi_calc" min="2000" max="2000" avg="2000"/>
+<pragma file="feature.c" line="39" pragmaType="interface" parentfunction="overlay_fea" mode="m_axi" port="data" bundle="" offset="" name="" depth="2000" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+</pragmas>

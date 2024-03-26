@@ -1,0 +1,6 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_PASSED" fe_name="BurstInferredPassed" src_info="feature.c:43:2" msg_id="214-116" msg_severity="INFO" msg_body="Sequential read of length 2000 has been inferred" OldID="load-store-loop.load.3," ID="dataseq" BundleName="gmem" VarName="data" LoopLoc="feature.c:43:2" LoopName="anonymous" ParentFunc="overlay_fea" Length="2000" Direction="read"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="GreaterOrEqualThresholdMissed" src_info="feature.c:43:2" msg_id="214-120" msg_severity="INFO" msg_body="Could not widen since the size of type 'float' is greater than or equal to the max_widen_bitwidth threshold of '0'." ID="dataseq" BundleName="gmem" VarName="data" ParentFunc="overlay_fea"/>
+    <burst group="BURST_SUMMARY" fe_name="BurstInferredSummaryPassed" src_info="feature.c:43:2" msg_id="214-115" msg_severity="INFO" msg_body="Multiple burst reads of length 2000 and bit width 32 in loop 'anonymous' has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings." BundleName="gmem" LoopLoc="feature.c:43:2" LoopName="anonymous" Length="2000" Width="32" Direction="read"/>
+</VitisHLS:BurstInfo>
+

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# xsim v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Mar 26 17:24:47 2024
+# Process ID: 21360
+# Current directory: E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/overlay_fea/xsim_script.tcl}
+# Log file: E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog/xsim.log
+# Journal file: E:/journal/tohpp/kur/sqi_ap/solution_SQIs/sim/verilog\xsim.jou
+# Running On: yutonghou, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16892 MB
+#-----------------------------------------------------------
+source xsim.dir/overlay_fea/xsim_script.tcl
+source overlay_fea.tcl

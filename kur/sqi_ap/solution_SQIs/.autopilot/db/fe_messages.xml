@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="feature.c:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mean_calc" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=2000 max=2000 avg=2000" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="feature.c:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ksqi_calc" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=2000 max=2000 avg=2000" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="feature.c:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="overlay_fea" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=overlay_fea" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="feature.c:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="overlay_fea" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2000 port=data" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="feature.c:21:0" msg_body="Inlining function 'mean_calc' into 'ksqi_calc'">
+        <args Callee="mean_calc" Caller="ksqi_calc"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="feature.c:39:0" msg_body="Inlining function 'ksqi_calc' into 'overlay_fea'">
+        <args Callee="ksqi_calc" Caller="overlay_fea"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
